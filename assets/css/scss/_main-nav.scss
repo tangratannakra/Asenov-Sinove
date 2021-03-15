@@ -1,0 +1,49 @@
+.header-logo {
+    a {
+        text-decoration: none;
+        font-size: 2rem;
+        font-family: 'Russo One', sans-serif;
+        text-transform: uppercase;
+        color: $primary-blue-dark;
+    }
+
+    span, small {
+        display: block;
+    }
+
+    span {
+        // text-transform: none;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.15rem;
+        width: 100%;
+        text-align: right;
+    }
+
+    small {
+        font-weight: 700;
+        letter-spacing: 1px;
+        
+    }
+}
+
+.main-nav {
+    display: flex;
+    width: 1100px;
+    margin: 0 auto;
+    justify-content: space-between;
+
+    &__list {
+        list-style: none;
+        display: flex;
+    }
+
+    &__item {
+        &:not(:last-child){
+            margin-right: $main-gutter/2;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
+}

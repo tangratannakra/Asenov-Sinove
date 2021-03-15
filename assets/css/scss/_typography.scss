@@ -1,0 +1,27 @@
+body{
+    color: $text-color-dark;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 100%;
+    line-height: 1.4;
+}
+
+h1 {
+    font-family: 'Russo One', sans-serif;
+}
+
+a {
+    font-weight: 700;
+
+    &:link {
+        text-decoration: none;
+    }
+
+    &:hover, &:focus {
+        text-decoration: underline;
+    }
+}
+
+p {
+    margin: $main-gutter 0;
+
+}
