@@ -24,10 +24,15 @@
     padding: $main-gutter $main-gutter/2;
     width: 25%;
     min-width: 250px;
+    transition: all 0.2s ease;
 
     &__cta {
         border: 1px solid $primary-yellow-dark;
         padding: $main-gutter/3 $main-gutter;
+
+        &:hover, &:focus {
+            cursor: pointer;
+        }
     }
   
 
@@ -35,9 +40,14 @@
         margin: $main-gutter/2;
     }
 
+    
+
     &:nth-child(1){
         margin-right: -20px;
-       
+
+        &:hover, &:focus {
+            margin-right: -50px;
+        }
     }
 
     &:nth-child(2){
@@ -48,14 +58,32 @@
         z-index: 10;
         box-shadow: 0px 7px 15px rgba(0,0,0, 0.4);
 
-     & > .card__cta {
+        & > .card__cta {
             border: 1px solid $primary-grey-light;
             background-color: $primary-yellow-dark;
+
+            &:hover, &:focus {
+                cursor: pointer;
+            }
+        }
+
+        &:hover, &:focus {
+            width: 30%;
         }
     }
 
     &:nth-child(3){
         margin-left: -20px;
 
+        &:hover, &:focus {
+            margin-left: -50px;
+        }
+
+    }
+
+    &:hover, &:focus {
+        background-color:$primary-yellow-light;
+        box-shadow: 0px 7px 20px rgba(0,0,0, 0.4);
+        z-index: 11;   
     }
 }
