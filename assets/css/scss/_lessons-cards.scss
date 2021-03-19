@@ -21,10 +21,12 @@
     align-items: center;
     background-color: $primary-grey-light-2;
     box-shadow: 0px 3px 3px rgba(0,0,0, 0.2);
-    padding: $main-gutter $main-gutter/2;
-    width: 25%;
+    padding: $main-gutter $main-gutter;
+    width: 30%;
     min-width: 250px;
     transition: all 0.2s ease;
+
+    font-size: 0.9rem;
 
     &__cta {
         border: 1px solid $primary-yellow-dark;
@@ -51,9 +53,9 @@
     }
 
     &:nth-child(2){
-        background-color:$primary-yellow-dark;
+        background-color:$primary-yellow-light;
         margin-top: -20px;
-        padding: $main-gutter*2 $main-gutter/4;
+        // padding: $main-gutter*2 $main-gutter/4;
         align-self: center;
         z-index: 10;
         box-shadow: 0px 7px 15px rgba(0,0,0, 0.4);
@@ -68,7 +70,8 @@
         }
 
         &:hover, &:focus {
-            width: 30%;
+            width: calc(30% + 100px);
+            padding:$main-gutter calc((#{$main-gutter}) + 50px) ;
         }
     }
 
@@ -82,8 +85,27 @@
     }
 
     &:hover, &:focus {
-        background-color:$primary-yellow-light;
-        box-shadow: 0px 7px 20px rgba(0,0,0, 0.4);
+        background-image: radial-gradient($primary-yellow-light, $primary-yellow-dark);
+        box-shadow: 0px 5px 10px rgba(0,0,0, 0.4), 0px 10px 20px rgba(0,0,0, 0.2);
         z-index: 11;   
     }
+
+    &__list{
+        margin-top:0px;
+        padding: $main-gutter/2;
+    }
+
+    small {
+        font-size:0.8rem;
+        font-weight: 800;
+        color: $primary-grey-dark-3;
+        padding-bottom: $main-gutter/2;
+        align-self: flex-start;
+    }
+}
+
+.card--sub {
+    width: calc( 100% / 3);
+    padding: $main-gutter/2 $main-gutter*1.5;
+    
 }

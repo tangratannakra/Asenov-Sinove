@@ -279,11 +279,12 @@ footer {
   background-color: #f4f4f4;
   -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
-  padding: 2rem 1rem;
-  width: 25%;
+  padding: 2rem 2rem;
+  width: 30%;
   min-width: 250px;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
+  font-size: 0.9rem;
 }
 
 .card__cta {
@@ -308,9 +309,8 @@ footer {
 }
 
 .card:nth-child(2) {
-  background-color: #f9bf15;
+  background-color: #fcdf5a;
   margin-top: -20px;
-  padding: 4rem 0.5rem;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -329,7 +329,8 @@ footer {
 }
 
 .card:nth-child(2):hover, .card:nth-child(2):focus {
-  width: 30%;
+  width: calc(30% + 100px);
+  padding: 2rem calc((2rem) + 50px);
 }
 
 .card:nth-child(3) {
@@ -341,10 +342,29 @@ footer {
 }
 
 .card:hover, .card:focus {
-  background-color: #fcdf5a;
-  -webkit-box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.4);
-          box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.4);
+  background-image: radial-gradient(#fcdf5a, #f9bf15);
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4), 0px 10px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4), 0px 10px 20px rgba(0, 0, 0, 0.2);
   z-index: 11;
+}
+
+.card__list {
+  margin-top: 0px;
+  padding: 1rem;
+}
+
+.card small {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #393939;
+  padding-bottom: 1rem;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.card--sub {
+  width: calc( 100% / 3);
+  padding: 1rem 3rem;
 }
 
 .technical-services {
