@@ -4,6 +4,12 @@
     padding: 0px;
 
     display: flex;
+    flex-wrap: wrap;
+
+    h1 {
+        align-self: flex-start;
+        width: 100%;
+    }
 
     & > * {
         width: 100%;

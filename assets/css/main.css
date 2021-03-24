@@ -226,6 +226,14 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.about-us h1 {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  width: 100%;
 }
 
 .about-us > * {
@@ -365,6 +373,10 @@ footer {
 .card--sub {
   width: calc( 100% / 3);
   padding: 1rem 3rem;
+}
+
+.services {
+  grid-column: 1/-1;
 }
 
 .technical-services {
