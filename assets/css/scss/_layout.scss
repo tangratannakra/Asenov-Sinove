@@ -29,3 +29,44 @@ footer {
     margin: auto 0 0 0;
     background-color: $primary-blue-dark;
 }
+
+.flex {
+    display:flex;
+    justify-content: space-between;
+    margin: $main-gutter*2 0;
+}
+
+.flex-30 {
+    width: 30%;
+}
+
+.flex-50 {
+    width:50%;
+    display: block;
+
+    &:first-child{
+        margin: 0 $main-gutter/2 0 0;
+    }
+
+    &:last-child {
+        margin: 0 0 0 $main-gutter/2;
+    }
+}
+
+.flex-60{
+    width: 60%;
+}
+
+@media (max-width:767.5px){
+    .flex {
+        flex-direction: column;
+    }
+
+    .flex-30, .flex-50, .flex-60 {
+        width: 100%;
+    }
+
+    .flex-50:last-child, .flex-50:first-child {
+        margin: 0;
+    }
+}
