@@ -95,6 +95,23 @@ footer {
   background-color: #141c28;
 }
 
+ol {
+  margin: 0 2rem;
+}
+
+ol li {
+  margin-bottom: 0.66667rem;
+}
+
+ol li:first-child {
+  margin-top: 1rem;
+}
+
+ol li::marker {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -429,5 +446,18 @@ footer {
 
 .u-clr-margin-row {
   margin: 0 -2rem;
+}
+
+.u-hover-box {
+  padding: 3rem;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.u-hover-box:hover {
+  -webkit-transform: scale(1.1) translateY(-10%) translateX(-30%);
+          transform: scale(1.1) translateY(-10%) translateX(-30%);
+  -webkit-box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1), 0px 10px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1), 0px 10px 10px rgba(0, 0, 0, 0.2);
 }
 /*# sourceMappingURL=main.css.map */

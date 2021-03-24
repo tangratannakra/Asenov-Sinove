@@ -30,6 +30,23 @@ footer {
     background-color: $primary-blue-dark;
 }
 
+ol {
+    margin:0 $main-gutter;
+
+    li {
+        margin-bottom: $main-gutter/3;
+
+        &:first-child {
+            margin-top:$main-gutter/2;
+        }
+    }
+
+    li::marker {
+        font-weight: bold;
+        font-size: 0.9rem;
+    }
+}
+
 .flex {
     display:flex;
     justify-content: space-between;
