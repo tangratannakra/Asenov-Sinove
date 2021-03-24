@@ -10,3 +10,19 @@
 @import './scss/services';
 @import './scss/contacts';
 @import './scss/technical-services';
+
+.u-bnd{
+    &-yellow {
+        background-color: $primary-yellow-light;
+    }
+
+    &-grey {
+        background-color: $primary-grey-light-2;
+    }
+}
+
+
+
+.u-clr-margin-row {
+    margin: 0 -#{$main-gutter};
+}
