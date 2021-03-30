@@ -79,7 +79,7 @@ body {
 }
 
 body > * {
-  padding: 2rem 10rem;
+  padding: 4rem 10rem;
 }
 
 header {
@@ -123,6 +123,10 @@ ol li::marker {
   font-size: 0.9rem;
 }
 
+ul li {
+  margin-left: 1rem;
+}
+
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -130,7 +134,8 @@ ol li::marker {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 4rem 0;
+  margin: 8rem 0;
+  padding: 4rem unset;
 }
 
 .flex-30 {
@@ -154,6 +159,14 @@ ol li::marker {
   width: 60%;
 }
 
+.flex p:first-child, .flex-30 p:first-child, .flex-50 p:first-child, .flex-60 p:first-child {
+  margin-top: 0;
+}
+
+.flex p:last-child, .flex-30 p:last-child, .flex-50 p:last-child, .flex-60 p:last-child {
+  margin-bottom: 0;
+}
+
 @media (max-width: 767.5px) {
   .flex {
     -webkit-box-orient: vertical;
@@ -167,6 +180,12 @@ ol li::marker {
   .flex-50:last-child, .flex-50:first-child {
     margin: 0;
   }
+}
+
+footer {
+  grid-column: 1/-1;
+  margin: 0 !important;
+  color: white;
 }
 
 .header-logo a {
@@ -342,7 +361,7 @@ ol li::marker {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 4rem 2rem;
+  padding: 8rem 2rem;
 }
 
 .cards-container ul small {
@@ -350,7 +369,11 @@ ol li::marker {
   font-size: 0.8rem;
 }
 
-.card {
+.u-clr-margin-row > .cards-container {
+  padding: 2rem 2rem;
+}
+
+.card, .card--sub {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -373,34 +396,41 @@ ol li::marker {
   font-size: 0.9rem;
 }
 
-.card h1 {
+.card h1, .card--sub h1 {
   font-size: 1.2rem;
 }
 
-.card__cta {
+.card__header, .card--sub__header {
+  text-align: center;
+}
+
+.card__cta, .card--sub__cta {
   border: 1px solid #f9bf15;
   padding: 0.66667rem 2rem;
   font-family: 'Oswald', sans-serif;
+  font-size: 0.8rem;
   text-transform: uppercase;
+  margin: auto 0 0 0 !important;
 }
 
-.card__cta:hover, .card__cta:focus {
+.card__cta:hover, .card__cta:focus, .card--sub__cta:hover, .card--sub__cta:focus {
   cursor: pointer;
+  text-decoration: none;
 }
 
-.card > * {
+.card > *, .card--sub > * {
   margin: 1rem;
 }
 
-.card:nth-child(1) {
+.card:nth-child(1), .card--sub:nth-child(1) {
   margin-right: -20px;
 }
 
-.card:nth-child(1):hover, .card:nth-child(1):focus {
+.card:nth-child(1):hover, .card:nth-child(1):focus, .card--sub:nth-child(1):hover, .card--sub:nth-child(1):focus {
   margin-right: -50px;
 }
 
-.card:nth-child(2) {
+.card:nth-child(2), .card--sub:nth-child(2) {
   background-color: #fcdf5a;
   margin-top: -20px;
   -ms-flex-item-align: center;
@@ -411,49 +441,59 @@ ol li::marker {
           box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.4);
 }
 
-.card:nth-child(2) h1 {
+.card:nth-child(2) h1, .card--sub:nth-child(2) h1 {
   font-size: 1.3rem;
 }
 
-.card:nth-child(2) > .card__cta {
+.card:nth-child(2) > .card__cta, .card--sub:nth-child(2) > .card__cta {
   border: 1px solid #fcfcfc;
   background-color: #f9bf15;
 }
 
-.card:nth-child(2) > .card__cta:hover, .card:nth-child(2) > .card__cta:focus {
+.card:nth-child(2) > .card__cta:hover, .card:nth-child(2) > .card__cta:focus, .card--sub:nth-child(2) > .card__cta:hover, .card--sub:nth-child(2) > .card__cta:focus {
   cursor: pointer;
 }
 
-.card:nth-child(2):hover, .card:nth-child(2):focus {
+.card:nth-child(2):hover, .card:nth-child(2):focus, .card--sub:nth-child(2):hover, .card--sub:nth-child(2):focus {
   width: calc(30% + 100px);
   padding: 2rem calc((2rem) + 50px);
 }
 
-.card:nth-child(3) {
+.card:nth-child(3), .card--sub:nth-child(3) {
   margin-left: -20px;
 }
 
-.card:nth-child(3):hover, .card:nth-child(3):focus {
+.card:nth-child(3):hover, .card:nth-child(3):focus, .card--sub:nth-child(3):hover, .card--sub:nth-child(3):focus {
   margin-left: -50px;
 }
 
-.card:hover, .card:focus {
+.card:hover, .card:focus, .card--sub:hover, .card--sub:focus {
   background-image: radial-gradient(#fcdf5a, #f9bf15);
   -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4), 0px 10px 20px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4), 0px 10px 20px rgba(0, 0, 0, 0.2);
   z-index: 11;
 }
 
-.card__list {
+.card:hover .card__cta, .card:focus .card__cta, .card--sub:hover .card__cta, .card--sub:focus .card__cta {
+  border: 1px solid #f9bf15;
+  background-color: #fcfcfc;
+}
+
+.card__list, .card--sub__list {
+  width: 100%;
   margin-top: 0px;
   padding: 1rem;
 }
 
-.card__list li:not(:last-child) {
+.card__list li, .card--sub__list li {
+  width: 100%;
+}
+
+.card__list li:not(:last-child), .card--sub__list li:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
-.card small {
+.card small, .card--sub small {
   font-size: 0.8rem;
   font-weight: 800;
   color: #393939;
@@ -464,7 +504,6 @@ ol li::marker {
 
 .card--sub {
   width: calc( 100% / 3);
-  padding: 1rem 3rem;
   font-size: 0.9rem;
 }
 
@@ -472,12 +511,89 @@ ol li::marker {
   font-size: 1.2rem;
 }
 
+.card--sub:nth-child(1), .card--sub:nth-child(2), .card--sub:nth-child(3) {
+  background-color: unset;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+  margin: unset;
+}
+
+.card--sub:nth-child(1):hover, .card--sub:nth-child(1):focus, .card--sub:nth-child(2):hover, .card--sub:nth-child(2):focus, .card--sub:nth-child(3):hover, .card--sub:nth-child(3):focus {
+  width: calc( 100% / 3) !important;
+  background-image: unset;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+  z-index: 11;
+  margin: unset !important;
+  margin-left: unset !important;
+  margin-right: unset !important;
+  padding: 2rem;
+}
+
 .services {
   grid-column: 1/-1;
+  padding-top: 4rem;
+  padding-bottom: 0px;
+}
+
+.services > .flex {
+  margin-top: 2rem;
+}
+
+.contacts {
+  grid-column: 1/-1;
+}
+
+.contacts--sub {
+  width: 70%;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  margin-bottom: 8rem;
+  text-align: center;
+  background-color: #fcdf5a;
 }
 
 .technical-services {
   grid-column: 1/-1;
+}
+
+footer a:link, footer a:visited {
+  color: white;
+}
+
+footer a:hover {
+  text-decoration: none;
+}
+
+.footer-logo a {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+.footer-logo a:link, .footer-logo a:visited {
+  color: white;
+}
+
+.footer-nav__list {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer-nav__item {
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding-bottom: 1rem;
 }
 
 .u-bnd-yellow {

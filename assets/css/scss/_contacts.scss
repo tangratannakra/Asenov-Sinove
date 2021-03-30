@@ -1,3 +1,16 @@
 .contacts {
+    grid-column: 1/-1;
+
+
+    &--sub {
+        width:70%;
+        padding: $main-gutter;
+        display: flex;
+        margin: 0 auto;
+        margin-bottom: $main-gutter*4;
+        text-align: center;
+
+        background-color: $primary-yellow-light;
+    }
     
 }

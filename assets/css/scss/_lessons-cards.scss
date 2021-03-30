@@ -11,13 +11,14 @@
     display: flex;
     justify-content: center;
 
-    padding: $main-gutter*2 $main-gutter;
+    padding: $main-gutter*4 $main-gutter;
 
     ul small {font-weight: 800; font-size: 0.8rem; }
-    
 }
 
-.card {
+.u-clr-margin-row > .cards-container { padding: $main-gutter $main-gutter;}
+
+.card, .card--sub {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -33,15 +34,23 @@
 
     h1 {font-size:1.2rem;}
 
+    &__header {
+        text-align: center;
+    }
+
     &__cta {
         border: 1px solid $primary-yellow-dark;
         padding: $main-gutter/3 $main-gutter;
 
         font-family: 'Oswald', sans-serif;
+        font-size: 0.8rem;
         text-transform: uppercase;
+
+        margin: auto 0 0 0!important;
 
         &:hover, &:focus {
             cursor: pointer;
+            text-decoration: none;
         }
     }
   
@@ -97,12 +106,20 @@
     &:hover, &:focus {
         background-image: radial-gradient($primary-yellow-light, $primary-yellow-dark);
         box-shadow: 0px 5px 10px rgba(0,0,0, 0.4), 0px 10px 20px rgba(0,0,0, 0.2);
-        z-index: 11;   
+        z-index: 11; 
+        
+        .card__cta {
+            border: 1px solid $primary-yellow-dark;
+            background-color: $primary-grey-light;
+        }
     }
 
     &__list{
+        width: 100%;
         margin-top:0px;
         padding: $main-gutter/2;
+
+        li {width: 100%;}
 
         li:not(:last-child){
             margin-bottom: 0.5rem;
@@ -122,8 +139,27 @@
 
 .card--sub {
     width: calc( 100% / 3);
-    padding: $main-gutter/2 $main-gutter*1.5;
+    // padding: $main-gutter/2 $main-gutter*1.5;
     font-size: 0.9rem;
+   
+
 
     h1 {font-size: 1.2rem;}
+
+    &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+        background-color: unset;
+        box-shadow: unset;
+        margin:unset;
+
+        &:hover, &:focus {
+            width: calc( 100% / 3)!important;
+            background-image:unset;
+            box-shadow: unset;
+            z-index: 11;
+            margin: unset!important;
+            margin-left:unset!important;
+            margin-right:unset!important;
+            padding: $main-gutter;
+        }
+    }
 }

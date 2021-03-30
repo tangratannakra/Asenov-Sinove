@@ -1,3 +1,7 @@
 .services {
     grid-column: 1/-1;
+    padding-top: $main-gutter*2;
+    padding-bottom: 0px;
+
+    & > .flex {margin-top: $main-gutter;}
 }

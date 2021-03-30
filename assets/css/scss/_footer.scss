@@ -1,0 +1,37 @@
+footer a {
+    &:link, &:visited {
+        color: white;
+    }
+    
+    &:hover {
+        text-decoration: none;
+    }    
+}
+
+
+.footer-logo a{
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+
+    &:link, &:visited {
+        color: white;
+    }
+
+}
+
+.footer-nav {
+    &__list{
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &__item {
+        // display: inline-block;
+        font-size: 0.8rem;
+        font-weight: 700;
+        padding-bottom: $main-gutter/2;
+    }
+}
