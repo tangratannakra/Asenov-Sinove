@@ -435,8 +435,6 @@ footer {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
-    -webkit-transform: unset;
-            transform: unset;
   }
 }
 
@@ -730,6 +728,15 @@ footer a:hover {
 
 .u-bnd-grey {
   background-color: #f4f4f4;
+}
+
+.u-bnd-shifter {
+  background-color: #f4f4f4;
+  background-image: -webkit-gradient(linear, right top, left top, from(rgba(252, 252, 252, 0.7)), to(#f4f4f4)), url(../images/cards.jpeg);
+  background-image: linear-gradient(to left, rgba(252, 252, 252, 0.7), #f4f4f4), url(../images/cards.jpeg);
+  background-size: 110%;
+  background-repeat: no-repeat;
+  background-position: -170% 50%;
 }
 
 .u-clr-margin-row {

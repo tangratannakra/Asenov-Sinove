@@ -20,8 +20,15 @@
     &-grey {
         background-color: $primary-grey-light-2;
     }
-}
 
+    &-shifter {
+        background-color: $primary-grey-light-2;
+        background-image: linear-gradient(to left, rgba($primary-grey-light, 0.7), rgba($primary-grey-light-2, 1)), url(../images/cards.jpeg);
+        background-size: 110%;
+        background-repeat: no-repeat;
+        background-position: -170% 50% ;
+    }
+}
 
 
 .u-clr-margin-row {
