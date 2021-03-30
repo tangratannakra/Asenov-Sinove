@@ -79,7 +79,7 @@ body {
 }
 
 body > * {
-  padding: 2rem;
+  padding: 2rem 10rem;
 }
 
 header {
@@ -320,6 +320,12 @@ ol li::marker {
 
 .about-us__content {
   padding: 2rem;
+  padding-right: 14rem;
+}
+
+.about-us__content h1 {
+  font-size: 2.5rem;
+  margin-top: -2rem;
 }
 
 .lessons {
@@ -337,6 +343,11 @@ ol li::marker {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 4rem 2rem;
+}
+
+.cards-container ul small {
+  font-weight: 800;
+  font-size: 0.8rem;
 }
 
 .card {
@@ -438,6 +449,10 @@ ol li::marker {
   padding: 1rem;
 }
 
+.card__list li:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
 .card small {
   font-size: 0.8rem;
   font-weight: 800;
@@ -450,6 +465,11 @@ ol li::marker {
 .card--sub {
   width: calc( 100% / 3);
   padding: 1rem 3rem;
+  font-size: 0.9rem;
+}
+
+.card--sub h1 {
+  font-size: 1.2rem;
 }
 
 .services {
@@ -469,13 +489,14 @@ ol li::marker {
 }
 
 .u-clr-margin-row {
-  margin: 0 -2rem;
+  margin: 0 -10rem;
+  padding: 2rem;
 }
 
 .u-hover-box {
   padding: 3rem;
-  -webkit-transition: all 0.2s cubic-bezier(0.1, 0.98, 0.71, 0.68);
-  transition: all 0.2s cubic-bezier(0.1, 0.98, 0.71, 0.68);
+  -webkit-transition: all 0.1s cubic-bezier(0.1, 0.98, 0.71, 0.68);
+  transition: all 0.1s cubic-bezier(0.1, 0.98, 0.71, 0.68);
 }
 
 .u-hover-box:hover {

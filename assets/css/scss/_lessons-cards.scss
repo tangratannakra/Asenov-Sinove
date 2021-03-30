@@ -1,6 +1,7 @@
 .lessons {
     grid-column: 1/-1;
     display: block;
+    // padding-left:0px;
 }
 
 .cards-container {
@@ -11,6 +12,8 @@
     justify-content: center;
 
     padding: $main-gutter*2 $main-gutter;
+
+    ul small {font-weight: 800; font-size: 0.8rem; }
     
 }
 
@@ -100,7 +103,13 @@
     &__list{
         margin-top:0px;
         padding: $main-gutter/2;
-    }
+
+        li:not(:last-child){
+            margin-bottom: 0.5rem;
+        }
+        
+        }
+    
 
     small {
         font-size:0.8rem;
@@ -114,5 +123,7 @@
 .card--sub {
     width: calc( 100% / 3);
     padding: $main-gutter/2 $main-gutter*1.5;
-    
+    font-size: 0.9rem;
+
+    h1 {font-size: 1.2rem;}
 }
