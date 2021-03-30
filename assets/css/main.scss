@@ -39,3 +39,25 @@
         box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.1), 0px 10px 10px rgba(0,0,0,0.2) ;
     }
 }
+
+@include respond-max(xl){
+    .u-clr-margin-row {
+        margin: 0 -#{$main-gutter};
+        padding: $main-gutter;
+    }
+}
+
+@include respond-max(lg){
+    .u-hover-box{
+        padding: $main-gutter*1.5;
+        margin-bottom: $main-gutter*2;
+    
+        transition: unset;
+    
+        &:hover {
+            transform: unset;
+            box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.1), 0px 10px 10px rgba(0,0,0,0.2) ;
+        }
+    }
+   
+}

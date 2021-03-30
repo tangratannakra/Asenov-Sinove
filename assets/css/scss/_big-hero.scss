@@ -23,6 +23,10 @@
         & > * {
             padding: $main-gutter/2;
         }
+
+        @include respond-max(md){
+            margin: 0;
+        }
     }
 
     &__header {
