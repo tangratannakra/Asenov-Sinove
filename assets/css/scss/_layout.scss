@@ -35,6 +35,8 @@ ol {
 
     li {
         margin-bottom: $main-gutter/3;
+        font-size:0.9rem;
+        line-height: 1.5;
 
         &:first-child {
             margin-top:$main-gutter/2;

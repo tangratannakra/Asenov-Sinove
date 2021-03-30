@@ -1,12 +1,23 @@
 body{
     color: $text-color-dark;
-    font-family: 'Montserrat', sans-serif;
+    // font-family: 'Montserrat', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 100%;
-    line-height: 1.4;
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Oswald', sans-serif;
 }
 
 h1 {
-    font-family: 'Russo One', sans-serif;
+    // font-family: 'Russo One', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 1.5rem;
 }
 
 a {
@@ -23,5 +34,4 @@ a {
 
 p {
     margin: $main-gutter 0;
-
 }
