@@ -1,16 +1,54 @@
 .contacts {
     grid-column: 1/-1;
 
+    &__phone, &__address {
+        position: relative;
+        text-align: left;
+        font-weight: 800;
+        padding-left:50px;
+
+        @include respond-max(md){
+            text-align: center;
+            margin: $main-gutter 0;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            display: block;
+            top:0;
+            left: 0;
+            width: 32px;
+            height: 100%;
+            background: url(../images/svg/phone_in_talk-24px.svg) center no-repeat;
+        }
+    }
+
+    &__address::before {
+        content: '';
+        background: url(../images/svg/location_on-24px.svg) center no-repeat;
+    }
+
+
 
     &--sub {
         width:70%;
-        padding: $main-gutter;
+        padding: $main-gutter*2 $main-gutter;
         display: flex;
-        margin: 0 auto;
-        margin-bottom: $main-gutter*4;
+        margin:0 auto $main-gutter*2;
         text-align: center;
 
         background-color: $primary-yellow-light;
+
+        @include respond-max(lg){
+            width:100%;
+
+            h2 {
+                display: block;
+                padding-left:50px ;
+            }
+
+        }
     }
     
 }

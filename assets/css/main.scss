@@ -47,6 +47,39 @@
     }
 }
 
+.u-middle {
+    max-width: 100ch;
+    margin: $main-gutter*4 auto;
+}
+
+.u-line-top {
+    position: relative;
+    &:before {
+        content:'';
+        position: absolute;
+        display: block;
+        top:-20px;
+        left:0;
+        width: 300px;
+        height: 3px;
+        background-color: $accent-color;
+    }
+}
+
+.u-line-bottom {
+    position: relative;
+    &:after {
+        content:'';
+        position: absolute;
+        display: block;
+        bottom:-20px;
+        right:0;
+        width: 300px;
+        height: 3px;
+        background-color: $accent-color;
+    }
+}
+
 @include respond-max(xl){
     .u-clr-margin-row {
         margin: 0 -#{$main-gutter};

@@ -3,6 +3,10 @@
     display: block;
     // padding-left:0px;
 
+    &__sub {
+        padding:$main-gutter*2 $main-gutter !important;
+    }
+
     @include respond-max(lg){
         .flex { width:100%; flex-direction: column;}
 
@@ -148,38 +152,38 @@
     }
 }
 
-    .card--sub {
-        width: calc( 100% / 3);
-        // padding: $main-gutter/2 $main-gutter*1.5;
-        font-size: 0.9rem;
-    
+.card--sub {
+    width: calc( 100% / 3);
+    // padding: $main-gutter/2 $main-gutter*1.5;
+    font-size: 0.9rem;
 
 
-        h1 {font-size: 1.2rem;}
 
-        &:nth-child(1), &:nth-child(2), &:nth-child(3) {
-            background-color: unset;
+    h1 {font-size: 1.2rem;}
+
+    &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+        background-color: unset;
+        box-shadow: unset;
+        margin:unset;
+
+        &:hover, &:focus {
+            width: calc( 100% / 3)!important;
+            background-image:unset;
             box-shadow: unset;
-            margin:unset;
-
-            &:hover, &:focus {
-                width: calc( 100% / 3)!important;
-                background-image:unset;
-                box-shadow: unset;
-                z-index: 11;
-                margin: unset!important;
-                margin-left:unset!important;
-                margin-right:unset!important;
-                padding: $main-gutter;
-            }
+            z-index: 11;
+            margin: unset!important;
+            margin-left:unset!important;
+            margin-right:unset!important;
+            padding: $main-gutter;
         }
     }
+}
 
-    @include respond-max(lg){
-        .card, .card--sub{
-            width: 100%;
+@include respond-max(lg){
+    .card, .card--sub{
+        width: 100%;
 
-            
+        
         &:nth-child(1), &:nth-child(2), &:nth-child(3) {
             background-color: unset;
             box-shadow: unset;

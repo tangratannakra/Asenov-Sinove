@@ -58,15 +58,20 @@ ol {
 }
 
 ul {
+    list-style: square;
+
     li {
         margin-left: $main-gutter/2;
+        &:not(:last-child){
+            margin-bottom: 0.5rem;
+        }
     }
 }
 
 .flex {
     display:flex;
     justify-content: space-between;
-    margin: $main-gutter*4 0;
+    margin: $main-gutter*2 0;
     padding: $main-gutter*2 unset;
 }
 

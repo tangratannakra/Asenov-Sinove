@@ -1,6 +1,16 @@
 .technical-services{
     grid-column: 1/-1;
 
+    ul {
+        list-style-position: inside;
+    }
+
+    ul li {
+        background-color: $primary-grey-dark-2;
+        padding: $main-gutter/2 $main-gutter;
+        margin-left:0;
+    }
+
     .flex-50 {
         &:first-child {
             padding-right: 5%; 
@@ -9,5 +19,4 @@
             padding-left: 5%;
         }
     }
-    
 }
