@@ -51,13 +51,11 @@
 
     &__header {
         text-align: center;
-
-        
-            font-size: 1.2rem; 
-            width: 100%; 
-            display: flex; 
-            flex-direction: column;
-            align-items: center;
+        font-size: 1.2rem; 
+        width: 100%; 
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
         
         &:after {
             content:'';
@@ -214,9 +212,17 @@
 }
 
 @include respond-max(lg){
+    .lessons {
+        padding: $main-gutter;
+    }
+
+    .cards-container {
+        padding: $main-gutter 0;
+    }
+
     .card, .card--sub{
         width: 100%;
-
+        padding:$main-gutter 0;
         
         &:nth-child(1), &:nth-child(2), &:nth-child(3) {
             background-color: unset;

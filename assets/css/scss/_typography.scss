@@ -37,3 +37,9 @@ a {
 p {
     margin: $main-gutter 0;
 }
+
+@include respond-max(lg){
+    body{
+        font-size: 90%;
+    }
+}

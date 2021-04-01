@@ -1,10 +1,12 @@
 .header-logo {
     a {
+       
         text-decoration: none;
         font-size: 2rem;
         font-family: 'Oswald', sans-serif;
         text-transform: uppercase;
         color: $primary-yellow-dark;
+        text-shadow: 2px 2px 0px $primary-blue-dark;
     }
 
     span, small {
@@ -31,7 +33,7 @@
 
 .main-nav {
     display: flex;
-    width: 1100px;
+    width: 100%;
     margin: 0 auto;
     justify-content: space-between;
     font-family: 'Oswald', sans-serif;
@@ -43,43 +45,79 @@
     }
 
     &__item {
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+
         &:not(:last-child){
             margin-right: $main-gutter/2;
         }
 
         a {
             text-decoration: none;
-        }
-    }
 
-    @include respond-max(lg){
-       
+            &:after {
+                content: '';
+                display: block;
+                border-bottom: 2px solid transparent;
+                width: 0%;
+                transition: width 0.5s ease;
+            }
 
-        &__list {
-            
-            position: absolute;
-            flex-direction: column;
-            top: 100px;
-            left: -100vw;
-            height: 100vh;
-            width: 0;
-            background-color: yellow;
-            z-index: 1;
-
-            transition: all 0.5s ease;
-
-            a {
-                display: inline-flex;
-               padding: $main-gutter/2; 
+            &:link, &:visited {
+                color:$accent-color;
             }
         }
     }
 }
 
+.main-nav__item:hover {
+    a:after {
+        content: '';
+        display: block;
+        border-bottom: 2px solid $accent-color;
+        width: 100%;
+    }
+}
+
+
 .main-nav__trigger {
     display: none;
+}
 
-    @include respond-max(lg){
+//mobile-nav
+@include respond-max(lg){
+    header {
+        margin:0;
+        padding: $main-gutter;
+    }
+
+    .main-nav {
+        
+        &__list {
+            position: absolute;
+            flex-direction: column;
+            top: 100px;
+            left: -100vw;
+            height: 70vh;
+            width: 0;
+            background-color: $gunmetal-gray-dark ;
+            z-index: 1;
+
+            transition: all 0.5s ease;
+        }
+        
+        &__item {
+            width: 100%;
+            align-items: flex-start;
+
+            a {
+                padding: $main-gutter/2 $main-gutter; 
+            }
+        }
+    }
+
+    .main-nav__trigger {
         display: block;
 
         &:checked + .main-nav__list {
@@ -90,7 +128,6 @@
             width: 100%;
             flex-direction: column;
             padding-top: 10vh;
-            padding-left: 10vw;
         }
     }
 }

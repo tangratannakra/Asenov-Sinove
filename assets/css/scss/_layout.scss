@@ -9,11 +9,20 @@ body {
         padding: $main-gutter*2 $main-gutter*5;
     }
 
+
     @include respond-max(xl){
         display: block;
 
         & > * {
             padding: $main-gutter/2 $main-gutter;
+        }
+    }
+
+    @include respond-max(md){
+        display: block;
+
+        & > * {
+            padding: $main-gutter/2 $main-gutter/2;
         }
     }
 }
@@ -22,10 +31,14 @@ header {
     grid-column: 1/-1;
     display: flex;
     padding: $main-gutter $main-gutter*4;
-    background:linear-gradient(45deg, $primary-blue-dark, $primary-blue-dark) ;
+    background:linear-gradient(45deg, $gunmetal-gray-dark, $gunmetal-gray-dark) ;
 
-    border-bottom: 2px solid darken($primary-orange-light, 10);
+    border-bottom: 2px solid darken($gunmetal-gray-dark, 10);
     width: 100%;
+
+    a:link {
+        color:white;
+    }
    
 }
 
@@ -41,6 +54,7 @@ header.fixed{
     small {display: none;}
 
     transition: all 0.5s ease;
+    background: rgba($gunmetal-gray-dark, 0.9) ;
 }
 
 .map {
