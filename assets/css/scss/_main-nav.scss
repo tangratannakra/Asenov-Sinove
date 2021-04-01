@@ -2,14 +2,14 @@
     a {
         text-decoration: none;
         font-size: 2rem;
-        // font-family: 'Russo One', sans-serif;
         font-family: 'Oswald', sans-serif;
         text-transform: uppercase;
-        color: $primary-blue-dark;
+        color: $primary-yellow-dark;
     }
 
     span, small {
         display: block;
+        color: $primary-grey-dark-2;
     }
 
     span {

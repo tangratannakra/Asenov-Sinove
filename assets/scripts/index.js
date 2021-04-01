@@ -1,5 +1,5 @@
 const scrollTopBtn = document.querySelector('.scroll-top');
-const topID = document.getElementById('top');
+const menu = document.getElementById('top');
 const screenY = window.innerHeight;
 
 
@@ -19,7 +19,15 @@ function scrollToTop()  {
   }
 
 function onScroll() {
-    window.pageYOffset > screenY ? scrollTopBtn.classList.add('visible') :  scrollTopBtn.classList.remove('visible'); 
+    if (window.pageYOffset > screenY){
+        scrollTopBtn.classList.add('visible');
+        menu.classList.add('fixed');
+    }
+    else{
+        scrollTopBtn.classList.remove('visible');
+        menu.classList.remove('fixed'); 
+    }
+
 }
 
 

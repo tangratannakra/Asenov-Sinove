@@ -21,8 +21,26 @@ body {
 header {
     grid-column: 1/-1;
     display: flex;
-    background:linear-gradient(45deg, $primary-orange-light, $primary-orange-dark) ;
+    padding: $main-gutter $main-gutter*4;
+    background:linear-gradient(45deg, $primary-blue-dark, $primary-blue-dark) ;
+
     border-bottom: 2px solid darken($primary-orange-light, 10);
+    width: 100%;
+   
+}
+
+header.fixed{
+    width: 100%;
+    box-shadow: 0 5px 15px rgba(0,0,0, 0.5);
+    padding: $main-gutter/2 $main-gutter;
+    
+    .main-nav {align-items: center;}
+
+    ul li {margin-bottom: 0;}
+
+    small {display: none;}
+
+    transition: all 0.5s ease;
 }
 
 .map {
@@ -149,5 +167,10 @@ button.scroll-top{
 
 .visible {
     display: block!important;
+}
 
+.fixed {
+    position: fixed;
+    top:0;
+    z-index: 100;
 }
