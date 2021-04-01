@@ -683,10 +683,20 @@ footer {
   padding-left: 50px;
 }
 
+.contacts__phone p, .contacts__address p {
+  margin: 0.33333rem 0;
+}
+
+.contacts__phone p:last-child, .contacts__address p:last-child {
+  margin-bottom: 0;
+}
+
 @media (max-width: 47.9em) {
   .contacts__phone, .contacts__address {
-    text-align: center;
     margin: 2rem 0;
+  }
+  .contacts__phone p, .contacts__address p {
+    margin-left: 20%;
   }
 }
 
@@ -712,8 +722,7 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 auto 4rem;
-  text-align: center;
+  margin: 4rem auto 4rem auto;
   background-color: #fcdf5a;
 }
 
@@ -721,10 +730,32 @@ footer {
   .contacts--sub {
     width: 100%;
   }
-  .contacts--sub h2 {
-    display: block;
-    padding-left: 50px;
-  }
+}
+
+.contacts__worktable {
+  font-size: 0.9rem;
+  width: 100%;
+  border-spacing: 1rem 0.5rem;
+}
+
+.contacts__worktable td {
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f9bf15;
+}
+
+.contacts__worktable td:first-child {
+  padding-right: 0.5rem;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 800;
+  font-size: 0.7rem;
+  text-align: right;
+}
+
+.contacts__worktable span {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
 }
 
 .technical-services {
@@ -785,6 +816,30 @@ footer a:hover {
   padding-bottom: 1rem;
 }
 
+.mt-1 {
+  margin-top: 2rem;
+}
+
+.mt-2 {
+  margin-top: 4rem;
+}
+
+.mt-4 {
+  margin-top: 8rem;
+}
+
+.my-1 {
+  margin: 2rem 0;
+}
+
+.my-2 {
+  margin: 4rem 0 !important;
+}
+
+.my-4 {
+  margin: 8rem 0 !important;
+}
+
 .u-bnd-yellow {
   background-color: #fcdf5a;
 }
@@ -835,7 +890,7 @@ footer a:hover {
   display: block;
   top: -20px;
   left: 0;
-  width: 300px;
+  width: 20%;
   height: 3px;
   background-color: #f9bf15;
 }
@@ -850,7 +905,7 @@ footer a:hover {
   display: block;
   bottom: -20px;
   right: 0;
-  width: 300px;
+  width: 40%;
   height: 3px;
   background-color: #f9bf15;
 }

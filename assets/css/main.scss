@@ -12,6 +12,17 @@
 @import './scss/technical-services';
 @import './scss/footer';
 
+.mt-1 {margin-top: $main-gutter*1;}
+.mt-2 {margin-top: $main-gutter*2;}
+.mt-4 {margin-top: $main-gutter*4;}
+.my-1 {margin: $main-gutter*1 0;}
+.my-2 {margin: $main-gutter*2 0!important;}
+.my-4 {margin: $main-gutter*4 0!important;}
+
+
+
+
+
 .u-bnd{
     &-yellow {
         background-color: $primary-yellow-light;
@@ -60,7 +71,7 @@
         display: block;
         top:-20px;
         left:0;
-        width: 300px;
+        width: 20%;
         height: 3px;
         background-color: $accent-color;
     }
@@ -74,7 +85,7 @@
         display: block;
         bottom:-20px;
         right:0;
-        width: 300px;
+        width: 40%;
         height: 3px;
         background-color: $accent-color;
     }

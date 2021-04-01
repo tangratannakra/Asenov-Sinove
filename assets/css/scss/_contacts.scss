@@ -7,9 +7,15 @@
         font-weight: 800;
         padding-left:50px;
 
+        p {margin:$main-gutter/6 0;}
+
+        p:last-child{ margin-bottom: 0;}
+
         @include respond-max(md){
-            text-align: center;
             margin: $main-gutter 0;
+            p {
+                margin-left: 20%;
+            }
         }
 
         &:before {
@@ -35,19 +41,37 @@
         width:70%;
         padding: $main-gutter*2 $main-gutter;
         display: flex;
-        margin:0 auto $main-gutter*2;
-        text-align: center;
-
+        margin:$main-gutter*2    auto $main-gutter*2 auto;
         background-color: $primary-yellow-light;
 
         @include respond-max(lg){
             width:100%;
+        }
+    }
 
-            h2 {
-                display: block;
-                padding-left:50px ;
+    &__worktable {
+        font-size: 0.9rem;
+        width: 100%;
+        border-spacing: $main-gutter/2  $main-gutter/4;
+
+        td {
+            padding-bottom: $main-gutter/4;
+            border-bottom: 1px solid $accent-color;
+
+            &:first-child {
+                padding-right: $main-gutter/4;
+                text-transform: uppercase;
+                font-family: 'Oswald', sans-serif;
+                font-weight: 800;
+                font-size:0.7rem;
+                text-align:right;
             }
+        }
 
+        span {
+            display: block;
+            font-size: 0.7rem;
+            font-weight: 700;
         }
     }
     
