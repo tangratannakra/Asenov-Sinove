@@ -51,6 +51,21 @@
 
     &__header {
         text-align: center;
+
+        
+            font-size: 1.2rem; 
+            width: 100%; 
+            display: flex; 
+            flex-direction: column;
+            align-items: center;
+        
+        &:after {
+            content:'';
+            display: block;
+            border-bottom: 2px solid transparent;
+            width: 0%;
+            transition: width 0.5s ease;
+        }
     }
 
     &__cta {
@@ -68,13 +83,10 @@
             text-decoration: none;
         }
     }
-  
 
     & > * {
         margin: $main-gutter/2;
     }
-
-    
 
     &:nth-child(1){
         margin-right: -20px;
@@ -127,6 +139,12 @@
             border: 1px solid $primary-yellow-dark;
             background-color: $primary-grey-light;
         }
+
+        .card__header:after {
+            content:'';
+            border-bottom: 2px solid $accent-color;
+            width: 40%;
+        }
     }
 
     &__list{
@@ -135,31 +153,33 @@
         padding: $main-gutter/2;
 
         li {width: 100%;}
-
         li:not(:last-child){
             margin-bottom: 0.5rem;
         }
-        
-        }
+    }
     
-
     small {
         font-size:0.8rem;
         font-weight: 800;
         color: $primary-grey-dark-3;
         padding-bottom: $main-gutter/2;
         align-self: flex-start;
+        width: 100%;
     }
 }
 
+
+
 .card--sub {
     width: calc( 100% / 3);
-    // padding: $main-gutter/2 $main-gutter*1.5;
     font-size: 0.9rem;
+    position: relative;
 
+    h1 {
+        font-size: 1.2rem; 
+        width: 100%;
+    }
 
-
-    h1 {font-size: 1.2rem;}
 
     &:nth-child(1), &:nth-child(2), &:nth-child(3) {
         background-color: unset;
@@ -175,7 +195,21 @@
             margin-left:unset!important;
             margin-right:unset!important;
             padding: $main-gutter;
+
+           
         }
+    }
+
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top:30%;
+        left:0;
+        width: 3px;
+        height: 60%;
+        border-right: 1px solid $accent-color;
+        // background-color: $accent-color;
     }
 }
 

@@ -511,6 +511,27 @@ footer {
 
 .card__header, .card--sub__header {
   text-align: center;
+  font-size: 1.2rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card__header:after, .card--sub__header:after {
+  content: '';
+  display: block;
+  border-bottom: 2px solid transparent;
+  width: 0%;
+  -webkit-transition: width 0.5s ease;
+  transition: width 0.5s ease;
 }
 
 .card__cta, .card--sub__cta {
@@ -588,6 +609,12 @@ footer {
   background-color: #fcfcfc;
 }
 
+.card:hover .card__header:after, .card:focus .card__header:after, .card--sub:hover .card__header:after, .card--sub:focus .card__header:after {
+  content: '';
+  border-bottom: 2px solid #f9bf15;
+  width: 40%;
+}
+
 .card__list, .card--sub__list {
   width: 100%;
   margin-top: 0px;
@@ -609,15 +636,18 @@ footer {
   padding-bottom: 1rem;
   -ms-flex-item-align: start;
       align-self: flex-start;
+  width: 100%;
 }
 
 .card--sub {
   width: calc( 100% / 3);
   font-size: 0.9rem;
+  position: relative;
 }
 
 .card--sub h1 {
   font-size: 1.2rem;
+  width: 100%;
 }
 
 .card--sub:nth-child(1), .card--sub:nth-child(2), .card--sub:nth-child(3) {
@@ -637,6 +667,17 @@ footer {
   margin-left: unset !important;
   margin-right: unset !important;
   padding: 2rem;
+}
+
+.card--sub:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 30%;
+  left: 0;
+  width: 3px;
+  height: 60%;
+  border-right: 1px solid #f9bf15;
 }
 
 @media (max-width: 61.9em) {
