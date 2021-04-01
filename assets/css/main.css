@@ -207,6 +207,32 @@ footer {
   color: white;
 }
 
+button.scroll-top {
+  display: none;
+  position: fixed;
+  bottom: 2vh;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  background: url(../images/svg/to-top.svg) center no-repeat;
+  background-color: #f9bf15;
+  border: 1px solid #f9bf15;
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  z-index: 100;
+}
+
+button.scroll-top:focus, button.scroll-top:active {
+  outline: none;
+}
+
+.visible {
+  display: block !important;
+}
+
 .header-logo a {
   text-decoration: none;
   font-size: 2rem;
@@ -910,8 +936,8 @@ footer a:hover {
 }
 
 .u-hover-box:hover {
-  -webkit-transform: scale(1.05) translateY(-10%) translateX(-20%);
-          transform: scale(1.05) translateY(-10%) translateX(-20%);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   -webkit-box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1), 0px 10px 10px rgba(0, 0, 0, 0.2);
           box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1), 0px 10px 10px rgba(0, 0, 0, 0.2);
 }
