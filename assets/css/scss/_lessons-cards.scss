@@ -8,6 +8,7 @@
     }
 
     @include respond-max(lg){
+        
         .flex { width:100%; flex-direction: column;}
 
         .flex-60 { width: 100%; order: 2;}
@@ -212,9 +213,9 @@
 }
 
 @include respond-max(lg){
-    .lessons {
-        padding: $main-gutter;
-    }
+    // .lessons {
+    //     padding: $main-gutter $main-gutter/2;
+    // }
 
     .cards-container {
         padding: $main-gutter 0;
@@ -223,11 +224,18 @@
     .card, .card--sub{
         width: 100%;
         padding:$main-gutter 0;
+
+        &:before, &:before {
+            width: 0;
+            display: none;
+        }
         
         &:nth-child(1), &:nth-child(2), &:nth-child(3) {
             background-color: unset;
             box-shadow: unset;
             margin:unset;
+
+
             
             &:hover, &:focus {
                 width: 100%!important;
@@ -237,7 +245,7 @@
                 margin: unset!important;
                 margin-left:unset!important;
                 margin-right:unset!important;
-                padding: $main-gutter;
+                padding: $main-gutter 0;
             }
         }
     }

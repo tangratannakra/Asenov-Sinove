@@ -26,3 +26,10 @@
         }
     }
 }
+
+
+@include respond-max(md){
+    .about-us__content {
+        padding-right: unset;
+    }
+}

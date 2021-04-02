@@ -5,13 +5,26 @@ body {
     display: grid;
     grid-template-columns: auto repeat(1, 1100px) auto ;
 
-    & > * {
-        padding: $main-gutter*2 $main-gutter*5;
+   
+
+
+    @include respond(lg){
+        & > * {
+            padding: $main-gutter/2 $main-gutter*2;
+        }
     }
 
+    @include respond(xl){
+        & > * {
+            padding: $main-gutter/2 $main-gutter*5;
+        }
+    }
 
     @include respond-max(xl){
         display: block;
+    }
+
+    @include respond-max(lg){
 
         & > * {
             padding: $main-gutter/2 $main-gutter;
@@ -19,7 +32,6 @@ body {
     }
 
     @include respond-max(md){
-        display: block;
 
         & > * {
             padding: $main-gutter/2 $main-gutter/2;

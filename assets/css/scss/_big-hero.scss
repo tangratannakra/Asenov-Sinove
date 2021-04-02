@@ -81,19 +81,27 @@
     &__list {
         grid-column: 4/-1;
         grid-row: 3/-1;
-
         color: white;
     }
 }
 
 @include respond-max(lg){
 
-.big-hero{
-    &__grid {
-        display:flex;
-        flex-direction: column;
-        width: 100%;
-        min-width: unset;
+    .big-hero{
+        &__grid {
+            display:flex;
+            flex-direction: column;
+        
+            min-width: unset;
+        }
     }
 }
+
+@include respond-max(sm){
+
+    .big-hero{
+        &__grid {
+           width: 100%;
+        }
+    }
 }
