@@ -288,6 +288,16 @@ button.scroll-top:focus, button.scroll-top:active {
   z-index: 100;
 }
 
+.lazy-load {
+  opacity: 0;
+}
+
+.lazy-load-off {
+  opacity: 1;
+  -webkit-transition: all 0.8s ease-in;
+  transition: all 0.8s ease-in;
+}
+
 @media (max-width: 47.9em) {
   .map {
     margin: 4rem auto 0 auto;

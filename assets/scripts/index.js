@@ -4,12 +4,9 @@ const screenY = window.innerHeight;
 const screenX = window.innerWidth;
 
 
-
 window.addEventListener('scroll', _.throttle(onScroll, 700), false);
 
 scrollTopBtn.addEventListener('click', scrollToTop);
-
-
 
 function scrollToTop()  {
     const c = document.documentElement.scrollTop || document.body.scrollTop;
@@ -30,8 +27,21 @@ function onScroll() {
     }
 }
 
+// Lazy Loading with Intersection Observer
+let lazyLoad = (entries, observer) => {
+  
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.remove('lazy-load');
+      entry.target.classList.add('lazy-load-off');
+    }
+  });
+}
 
+const lazyEl = document.querySelectorAll('.lazy-load'); 
+const options = { root: document.querySelector('header')};
+const observer = new IntersectionObserver(lazyLoad);
 
-
-
-
+Array.prototype.forEach.call(lazyEl, (el) => {
+    observer.observe(el);
+  });

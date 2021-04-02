@@ -201,6 +201,15 @@ button.scroll-top{
     z-index: 100;
 }
 
+.lazy-load {
+    opacity: 0;
+}
+
+.lazy-load-off {
+    opacity: 1;
+    transition: all 0.8s ease-in;
+}
+
 @include respond-max(md){
     .map{
         margin: $main-gutter*2 auto 0 auto;
