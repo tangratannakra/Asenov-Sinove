@@ -35,9 +35,17 @@
     &-shifter {
         background-color: $primary-grey-light-2;
         background-image: linear-gradient(to left, rgba($primary-grey-light, 0.7), rgba($primary-grey-light-2, 1)), url(../images/cards.jpeg);
-        background-size: 110%;
+       
         background-repeat: no-repeat;
-        background-position: -170% 50% ;
+       
+        @include respond-max(xl){
+        background-size: cover;
+        }
+
+        @include respond(xl){
+            background-size: 110%;
+            background-position: -170% 50% ;
+        }
     }
 }
 
