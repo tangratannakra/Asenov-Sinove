@@ -19,6 +19,12 @@
         }
     }
 
+    &__strug{
+        &__img {
+            background: url(../images/big-hero-2.jpg) center no-repeat
+        }
+    }
+
     .flex-50 {
         &:first-child {
             padding-right: 5%; 

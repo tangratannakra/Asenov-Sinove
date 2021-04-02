@@ -21,7 +21,11 @@
 
 
 
-
+.u-phone {
+    &:link, &:visited{
+        color:black;
+    }
+}
 
 .u-bnd{
     &-yellow {

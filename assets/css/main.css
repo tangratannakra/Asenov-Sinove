@@ -496,6 +496,13 @@ button.scroll-top:focus, button.scroll-top:active {
   background-color: #efefef;
   border-left: 10px solid #fe9703;
   margin: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 700;
 }
 
 .big-hero__tel {
@@ -536,7 +543,11 @@ button.scroll-top:focus, button.scroll-top:active {
 }
 
 @media (max-width: 61.9em) {
+  .big-hero {
+    padding-left: 2rem;
+  }
   .big-hero__grid {
+    width: 80%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -549,6 +560,7 @@ button.scroll-top:focus, button.scroll-top:active {
 }
 
 @media (max-width: 35.9em) {
+  padding-left: 2rem;
   .big-hero__grid {
     width: 100%;
   }
@@ -1001,6 +1013,10 @@ button.scroll-top:focus, button.scroll-top:active {
   }
 }
 
+.technical-services__strug__img {
+  background: url(../images/big-hero-2.jpg) center no-repeat;
+}
+
 .technical-services .flex-50:first-child {
   padding-right: 5%;
 }
@@ -1085,6 +1101,10 @@ footer a:hover {
 
 .my-4 {
   margin: 8rem 0 !important;
+}
+
+.u-phone:link, .u-phone:visited {
+  color: black;
 }
 
 .u-bnd-yellow {
