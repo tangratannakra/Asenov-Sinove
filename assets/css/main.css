@@ -288,6 +288,12 @@ button.scroll-top:focus, button.scroll-top:active {
   z-index: 100;
 }
 
+@media (max-width: 47.9em) {
+  .map {
+    margin: 4rem auto 0 auto;
+  }
+}
+
 .header-logo a {
   text-decoration: none;
   font-size: 2rem;
@@ -582,7 +588,7 @@ button.scroll-top:focus, button.scroll-top:active {
 
 @media (max-width: 47.9em) {
   .about-us__content {
-    padding-right: unset;
+    padding: 2rem 1rem;
   }
 }
 
@@ -1003,6 +1009,12 @@ button.scroll-top:focus, button.scroll-top:active {
   padding-left: 5%;
 }
 
+@media (max-width: 47.9em) {
+  .technical-services .flex-50:last-child {
+    padding: 4rem 1rem;
+  }
+}
+
 footer a:link, footer a:visited {
   color: white;
 }
@@ -1037,6 +1049,18 @@ footer a:hover {
   font-size: 0.8rem;
   font-weight: 700;
   padding-bottom: 1rem;
+}
+
+@media (max-width: 47.9em) {
+  .footer-logo {
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+  }
+  .footer-nav__list {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 
 .mt-1 {

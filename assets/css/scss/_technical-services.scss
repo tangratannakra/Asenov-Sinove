@@ -28,3 +28,9 @@
         }
     }
 }
+
+@include respond-max(md){
+    .technical-services .flex-50:last-child {
+        padding: $main-gutter*2 $main-gutter/2;
+    }
+}

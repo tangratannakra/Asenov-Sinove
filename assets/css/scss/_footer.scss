@@ -35,3 +35,17 @@ footer a {
         padding-bottom: $main-gutter/2;
     }
 }
+
+
+@include respond-max(md){
+
+    .footer-logo {
+        margin-left: $main-gutter/2;
+        margin-bottom: $main-gutter;
+    }
+
+    .footer-nav__list{
+        justify-content: flex-start;
+    }
+
+}
