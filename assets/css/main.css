@@ -263,8 +263,9 @@ button.scroll-top {
   z-index: 100;
 }
 
-button.scroll-top:focus, button.scroll-top:active {
+button.scroll-top:focus, button.scroll-top:active, button.scroll-top:hover {
   outline: none;
+  cursor: pointer;
 }
 
 .visible {

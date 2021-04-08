@@ -190,8 +190,9 @@ button.scroll-top{
   
     z-index: 100;
 
-    &:focus, &:active {
-        outline: none;
+    &:focus, &:active, &:hover {
+        outline: none;  
+        cursor: pointer;
     }
 }
 

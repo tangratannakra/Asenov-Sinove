@@ -1,9 +1,17 @@
 const scrollTopBtn = document.querySelector('.scroll-top');
 const menu = document.getElementById('top');
 const screenY = window.innerHeight;
-const screenX = window.innerWidth;
+const cardCTA = document.querySelectorAll('.card__cta');
+const contacts = document.getElementById('contacts');
 
 
+[...cardCTA].map( ctabtn => ctabtn.addEventListener('click', scrollToEl.bind(this, contacts))); //contacts.scrollIntoView.bind(contacts, {behavior: "smooth"}))
+
+function scrollToEl(el){
+  el.scrollIntoView({behavior: "smooth"});
+}
+
+//Scroll to Top
 window.addEventListener('scroll', _.throttle(onScroll, 700), false);
 scrollTopBtn.addEventListener('click', scrollToTop);
 
@@ -15,6 +23,7 @@ function scrollToTop()  {
     }
   }
 
+//Show hide Menu
 function onScroll() {
     if (window.pageYOffset > screenY){
         scrollTopBtn.classList.add('visible');
@@ -35,13 +44,10 @@ let lazyLoad = (entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.remove('lazy-load');
-      entry.target.classList.add('lazy-load-off');
+      entry.target.classList.add('lazy-load-off');  
     }
   });
 }
 
-const observer = new IntersectionObserver(lazyLoad);
-
-[...lazyEl].map( el => {
-    observer.observe(el);
-    });
+const lazyObserver = new IntersectionObserver(lazyLoad);
+[...lazyEl].map( el => lazyObserver.observe(el));
