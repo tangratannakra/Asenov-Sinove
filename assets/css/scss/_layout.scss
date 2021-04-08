@@ -10,7 +10,7 @@ body {
 
     @include respond(lg){
         & > * {
-            padding: $main-gutter/2 $main-gutter*2;
+            padding: $main-gutter/2 $main-gutter;
         }
     }
 

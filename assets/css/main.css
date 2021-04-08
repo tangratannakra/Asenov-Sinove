@@ -84,7 +84,7 @@ body {
 
 @media (min-width: 62em) {
   body > * {
-    padding: 1rem 4rem;
+    padding: 1rem 2rem;
   }
 }
 
@@ -408,7 +408,7 @@ button.scroll-top:focus, button.scroll-top:active {
         -ms-flex-direction: column;
             flex-direction: column;
     top: 100px;
-    left: -100vw;
+    left: -100%;
     height: 70vh;
     width: 0;
     background-color: #3f3f4e;
@@ -426,9 +426,35 @@ button.scroll-top:focus, button.scroll-top:active {
     padding: 1rem 2rem;
   }
   .main-nav__trigger {
-    display: block;
+    display: none;
   }
-  .main-nav__trigger:checked + .main-nav__list {
+  .main-nav__trigger + label {
+    width: 25px;
+    height: 2px;
+    position: absolute;
+    background-color: #f9bf15;
+    right: 2rem;
+    top: 50px;
+  }
+  .main-nav__trigger + label:hover {
+    cursor: pointer;
+  }
+  .main-nav__trigger + label:before, .main-nav__trigger + label:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: inherit;
+  }
+  .main-nav__trigger + label:before {
+    position: absolute;
+    top: -6px;
+  }
+  .main-nav__trigger + label:after {
+    position: absolute;
+    top: 6px;
+  }
+  .main-nav__trigger:checked ~ .main-nav__list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -436,11 +462,33 @@ button.scroll-top:focus, button.scroll-top:active {
     left: 0px;
     height: 100vh;
     width: 100%;
+    padding: 2rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     padding-top: 10vh;
+  }
+  .main-nav__trigger:checked + label {
+    height: 0px;
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+  .main-nav__trigger:checked + label::before {
+    -webkit-transform: rotate(45deg) translateY(8px);
+            transform: rotate(45deg) translateY(8px);
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+  .main-nav__trigger:checked + label::after {
+    -webkit-transform: rotate(-45deg) translateY(-9px);
+            transform: rotate(-45deg) translateY(-9px);
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    -webkit-transform-origin: center;
+            transform-origin: center;
   }
 }
 
@@ -1024,7 +1072,19 @@ button.scroll-top:focus, button.scroll-top:active {
 }
 
 .technical-services__strug__img {
-  background: url(../images/big-hero-2.jpg) center no-repeat;
+  background: url(../images/tech.jpg) center no-repeat;
+  background-size: auto 100%;
+  background-position: top center;
+  min-height: 300px;
+}
+
+@media (max-width: 47.9em) {
+  .technical-services__strug {
+    margin: 0px;
+  }
+  .technical-services__strug__img {
+    margin: 0px !important;
+  }
 }
 
 .technical-services .flex-50:first-child {
@@ -1163,7 +1223,7 @@ footer a:hover {
 
 @media (min-width: 62em) {
   .u-clr-margin-row {
-    margin: 0 -4rem;
+    margin: 0 -2rem;
   }
 }
 

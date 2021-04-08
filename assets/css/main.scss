@@ -67,7 +67,7 @@
     }
 
     @include respond(lg){
-        margin: 0 -#{$main-gutter*2};
+        margin: 0 -#{$main-gutter};
     }
 
    @include respond(xl){
