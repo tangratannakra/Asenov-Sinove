@@ -5,7 +5,6 @@ const screenX = window.innerWidth;
 
 
 window.addEventListener('scroll', _.throttle(onScroll, 700), false);
-
 scrollTopBtn.addEventListener('click', scrollToTop);
 
 function scrollToTop()  {
@@ -17,7 +16,7 @@ function scrollToTop()  {
   }
 
 function onScroll() {
-    if (window.pageYOffset > screenY && screenX > 1000){
+    if (window.pageYOffset > screenY){
         scrollTopBtn.classList.add('visible');
         menu.classList.add('fixed');
     }
@@ -28,7 +27,10 @@ function onScroll() {
 }
 
 // Lazy Loading with Intersection Observer
-let lazyLoad = (entries, observer) => {
+const lazyEl = document.querySelectorAll('.lazy-load'); 
+
+let lazyLoad = (entries) => {
+  console.log(entries);
   
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -38,10 +40,8 @@ let lazyLoad = (entries, observer) => {
   });
 }
 
-const lazyEl = document.querySelectorAll('.lazy-load'); 
-const options = { root: document.querySelector('header')};
 const observer = new IntersectionObserver(lazyLoad);
 
-Array.prototype.forEach.call(lazyEl, (el) => {
+[...lazyEl].map( el => {
     observer.observe(el);
-  });
+    });
