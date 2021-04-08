@@ -76,10 +76,13 @@ p {
 body {
   min-height: 100vh;
   width: 100%;
-  display: -ms-grid;
-  display: grid;
+  display: block;
   -ms-grid-columns: auto (1100px)[1] auto;
       grid-template-columns: auto repeat(1, 1100px) auto;
+}
+
+body > * {
+  padding: 1rem 2rem;
 }
 
 @media (min-width: 62em) {
@@ -89,26 +92,12 @@ body {
 }
 
 @media (min-width: 75em) {
+  body {
+    display: -ms-grid;
+    display: grid;
+  }
   body > * {
     padding: 1rem 10rem;
-  }
-}
-
-@media (max-width: 74.9em) {
-  body {
-    display: block;
-  }
-}
-
-@media (max-width: 61.9em) {
-  body > * {
-    padding: 1rem 2rem;
-  }
-}
-
-@media (max-width: 47.9em) {
-  body > * {
-    padding: 1rem 1rem;
   }
 }
 
@@ -673,7 +662,6 @@ button.scroll-top:focus, button.scroll-top:active {
 
 @media (max-width: 61.9em) {
   .lessons .flex {
-    width: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -690,6 +678,12 @@ button.scroll-top:focus, button.scroll-top:active {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+  }
+}
+
+@media (min-width: 62em) {
+  .lessons__sub {
+    padding: 4rem 10rem !important;
   }
 }
 
@@ -1016,7 +1010,7 @@ button.scroll-top:focus, button.scroll-top:active {
   background-color: #fcdf5a;
 }
 
-@media (max-width: 61.9em) {
+@media (max-width: 74.9em) {
   .contacts--sub {
     width: 100%;
   }
@@ -1211,7 +1205,7 @@ footer a:hover {
 
 @media (max-width: 47.9em) {
   .u-clr-margin-row {
-    width: 100%;
+    margin: 0 -2rem;
   }
 }
 
@@ -1224,6 +1218,7 @@ footer a:hover {
 @media (min-width: 62em) {
   .u-clr-margin-row {
     margin: 0 -2rem;
+    padding: 2rem 4rem;
   }
 }
 

@@ -57,9 +57,11 @@
 .u-clr-margin-row {
    
     padding: $main-gutter;
-
+    
     @include respond-max(md){
-        width: 100%;
+        
+
+        margin: 0 -#{$main-gutter};
     }
 
     @include respond(sm){
@@ -68,12 +70,13 @@
 
     @include respond(lg){
         margin: 0 -#{$main-gutter};
+        padding: $main-gutter $main-gutter*2;
     }
 
    @include respond(xl){
-        margin: 0 -#{$main-gutter*5};
-        
+        margin: 0 -#{$main-gutter*5};   
     }
+
 }
 
 .u-hover-box{

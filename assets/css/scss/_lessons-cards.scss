@@ -7,13 +7,21 @@
         padding:$main-gutter*2 $main-gutter !important;
     }
 
+
     @include respond-max(lg){
         
-        .flex { width:100%; flex-direction: column;}
+        .flex { flex-direction: column;}
 
         .flex-60 { width: 100%; order: 2;}
         .flex-30 {width: 100%; order: 1; }
     }
+
+    @include respond(lg){
+        &__sub {
+            padding:$main-gutter*2 $main-gutter*5 !important;
+        }
+    }
+
 }
 
 .cards-container {

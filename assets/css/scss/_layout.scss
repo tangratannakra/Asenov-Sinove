@@ -1,12 +1,18 @@
 body {
     min-height: 100vh;
     width: 100%;
-
-    display: grid;
+    display: block;
+    
     grid-template-columns: auto repeat(1, 1100px) auto ;
 
-   
+    & > * {
+        padding: $main-gutter/2 $main-gutter ;
+    }
 
+
+    @include respond(md){
+
+    }
 
     @include respond(lg){
         & > * {
@@ -15,28 +21,26 @@ body {
     }
 
     @include respond(xl){
+        display: grid;
+
         & > * {
             padding: $main-gutter/2 $main-gutter*5;
         }
     }
 
-    @include respond-max(xl){
-        display: block;
-    }
+    // @include respond-max(lg){
 
-    @include respond-max(lg){
+    //     & > * {
+    //         padding: $main-gutter/2 $main-gutter;
+    //     }
+    // }
 
-        & > * {
-            padding: $main-gutter/2 $main-gutter;
-        }
-    }
+    // @include respond-max(md){
 
-    @include respond-max(md){
-
-        & > * {
-            padding: $main-gutter/2 $main-gutter/2;
-        }
-    }
+    //     & > * {
+    //         padding: $main-gutter/2 $main-gutter/2;
+    //     }
+    // }
 }
 
 header {

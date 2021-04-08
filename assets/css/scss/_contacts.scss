@@ -44,7 +44,7 @@
         margin:$main-gutter*2    auto $main-gutter*2 auto;
         background-color: $primary-yellow-light;
 
-        @include respond-max(lg){
+        @include respond-max(xl){
             width:100%;
         }
     }
