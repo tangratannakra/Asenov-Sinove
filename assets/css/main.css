@@ -245,7 +245,7 @@ footer {
   color: white;
 }
 
-button.scroll-top {
+.scroll-top {
   display: none;
   position: fixed;
   bottom: 2vh;
@@ -263,7 +263,7 @@ button.scroll-top {
   z-index: 100;
 }
 
-button.scroll-top:focus, button.scroll-top:active, button.scroll-top:hover {
+.scroll-top:focus, .scroll-top:active, .scroll-top:hover {
   outline: none;
   cursor: pointer;
 }
@@ -777,6 +777,10 @@ button.scroll-top:focus, button.scroll-top:active, button.scroll-top:hover {
   font-size: 0.8rem;
   text-transform: uppercase;
   margin: auto 0 0 0 !important;
+}
+
+.card__cta:link, .card__cta:active, .card__cta:visited, .card--sub__cta:link, .card--sub__cta:active, .card--sub__cta:visited {
+  color: black;
 }
 
 .card__cta:hover, .card__cta:focus, .card--sub__cta:hover, .card--sub__cta:focus {

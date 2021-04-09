@@ -3,27 +3,31 @@ const menu = document.getElementById('top');
 const screenY = window.innerHeight;
 const cardCTA = document.querySelectorAll('.card__cta');
 const contacts = document.getElementById('contacts');
+const mainNavItem = document.querySelectorAll('.main-nav__item > a');
 
 
-[...cardCTA].map( ctabtn => ctabtn.addEventListener('click', scrollToEl.bind(this, contacts))); //contacts.scrollIntoView.bind(contacts, {behavior: "smooth"}))
-
-function scrollToEl(el){
-  el.scrollIntoView({behavior: "smooth"});
-}
-
-//Scroll to Top
+[...mainNavItem].map( item => item.addEventListener('click', scrollToEl));
+[...cardCTA].map( ctabtn => ctabtn.addEventListener('click', scrollToEl));
+scrollTopBtn.addEventListener('click', scrollToEl);
 window.addEventListener('scroll', _.throttle(onScroll, 700), false);
-scrollTopBtn.addEventListener('click', scrollToTop);
 
-function scrollToTop()  {
-    const c = document.documentElement.scrollTop || document.body.scrollTop;
-    if (c > 0) {
-      window.requestAnimationFrame(scrollToTop);
-      window.scrollTo(0, c - c / 8);
-    }
+//Scroll to ELement
+function scrollToEl(e){
+  e.preventDefault();
+
+  let itemLink = this.getAttribute("href");
+  let scrollToElm = document.querySelector(itemLink);
+  let scrollOptions = {
+    top: scrollToElm.offsetTop - 100,
+    behavior: 'smooth'
   }
 
-//Show hide Menu
+  window.scrollTo(scrollOptions);
+}
+
+
+
+//Show hide Menu and scroll to top btn
 function onScroll() {
     if (window.pageYOffset > screenY){
         scrollTopBtn.classList.add('visible');
@@ -35,11 +39,10 @@ function onScroll() {
     }
 }
 
+
 // Lazy Loading with Intersection Observer
 const lazyEl = document.querySelectorAll('.lazy-load'); 
-
 let lazyLoad = (entries) => {
-  console.log(entries);
   
   entries.forEach(entry => {
     if (entry.isIntersecting) {

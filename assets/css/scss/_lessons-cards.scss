@@ -85,6 +85,10 @@
 
         margin: auto 0 0 0!important;
 
+        &:link, &:active, &:visited {
+            color:black;
+        }
+
         &:hover, &:focus {
             cursor: pointer;
             text-decoration: none;
