@@ -17,9 +17,9 @@ window.addEventListener('scroll', _.throttle(onScroll, 700), false);
 function scrollToEl(e){
   e.preventDefault();
 
-  let itemLink = this.getAttribute("href");
-  let scrollToElm = document.querySelector(itemLink);
-  let scrollOptions = {
+  const itemLink = this.getAttribute("href");
+  const scrollToElm = document.querySelector(itemLink);
+  const scrollOptions = {
     top: scrollToElm.offsetTop - 100,
     behavior: 'smooth'
   }
