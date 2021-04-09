@@ -4,9 +4,11 @@ const screenY = window.innerHeight;
 const cardCTA = document.querySelectorAll('.card__cta');
 const contacts = document.getElementById('contacts');
 const mainNavItem = document.querySelectorAll('.main-nav__item > a');
+const footNavItem = document.querySelectorAll('.footer-nav__item > a');
 
 
 [...mainNavItem].map( item => item.addEventListener('click', scrollToEl));
+[...footNavItem].map( item => item.addEventListener('click', scrollToEl));
 [...cardCTA].map( ctabtn => ctabtn.addEventListener('click', scrollToEl));
 scrollTopBtn.addEventListener('click', scrollToEl);
 window.addEventListener('scroll', _.throttle(onScroll, 700), false);
