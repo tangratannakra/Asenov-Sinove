@@ -5,9 +5,18 @@ const cardCTA = document.querySelectorAll('.card__cta');
 const contacts = document.getElementById('contacts');
 const mainNavItem = document.querySelectorAll('.main-nav__item > a');
 const footNavItem = document.querySelectorAll('.footer-nav__item > a');
+const menuToggler = document.querySelector('.main-nav__toggler');
+const menuTrigger = document.querySelector('.main-nav__trigger');
 
 
-[...mainNavItem].map( item => item.addEventListener('click', scrollToEl));
+[...mainNavItem].map( item => item.addEventListener('click', (e)=>{
+  scrollToEl.bind(this, e);
+    if (window.innerWidth < 992){
+      menuTrigger.checked = false;
+    }
+  }
+));
+
 [...footNavItem].map( item => item.addEventListener('click', scrollToEl));
 [...cardCTA].map( ctabtn => ctabtn.addEventListener('click', scrollToEl));
 scrollTopBtn.addEventListener('click', scrollToEl);
