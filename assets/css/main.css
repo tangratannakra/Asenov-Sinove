@@ -419,28 +419,33 @@ footer {
     display: none;
   }
   .main-nav__trigger + label {
+    position: relative;
+    height: 30px;
+    width: 25px;
+    outline: none;
+  }
+  .main-nav__trigger + label .dash {
+    position: absolute;
     width: 25px;
     height: 2px;
-    position: absolute;
+    top: 10px;
     background-color: #f9bf15;
-    right: 2rem;
-    top: 50px;
   }
-  .main-nav__trigger + label:hover {
+  .main-nav__trigger + label .dash:hover {
     cursor: pointer;
   }
-  .main-nav__trigger + label:before, .main-nav__trigger + label:after {
+  .main-nav__trigger + label .dash:before, .main-nav__trigger + label .dash:after {
     content: "";
     display: block;
     width: 100%;
     height: 2px;
     background-color: inherit;
   }
-  .main-nav__trigger + label:before {
+  .main-nav__trigger + label .dash:before {
     position: absolute;
     top: -6px;
   }
-  .main-nav__trigger + label:after {
+  .main-nav__trigger + label .dash:after {
     position: absolute;
     top: 6px;
   }
@@ -459,12 +464,14 @@ footer {
             flex-direction: column;
     padding-top: 10vh;
   }
-  .main-nav__trigger:checked + label {
+  .main-nav__trigger:checked + label .dash {
     height: 0px;
-    -webkit-transform: translateX(10px);
-            transform: translateX(10px);
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+    -webkit-transform-origin: center;
+            transform-origin: center;
   }
-  .main-nav__trigger:checked + label::before {
+  .main-nav__trigger:checked + label .dash::before {
     -webkit-transform: rotate(45deg) translateY(8px);
             transform: rotate(45deg) translateY(8px);
     -webkit-transition: all 0.2s ease;
@@ -472,13 +479,11 @@ footer {
     -webkit-transform-origin: center;
             transform-origin: center;
   }
-  .main-nav__trigger:checked + label::after {
+  .main-nav__trigger:checked + label .dash::after {
     -webkit-transform: rotate(-45deg) translateY(-9px);
             transform: rotate(-45deg) translateY(-9px);
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
-    -webkit-transform-origin: center;
-            transform-origin: center;
   }
 }
 
