@@ -40,7 +40,7 @@ function scrollToEl(e){
 
 //Show hide Menu and scroll to top btn
 function onScroll() {
-    if (window.pageYOffset > screenY){
+    if (window.pageYOffset > (screenY - 200) ){
         scrollTopBtn.classList.add('visible');
         menu.classList.add('fixed');
     }
