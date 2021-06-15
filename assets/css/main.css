@@ -105,13 +105,13 @@ p {
     z-index: -1;
     opacity: 0.2;
   }
-  :hover:before, :hover:after {
+  .gtp-desktop:hover:before, .gtp-desktop:hover:after {
     -webkit-transform: rotate(359deg);
             transform: rotate(359deg);
-    -webkit-transition: -webkit-transform 3.5s cubic-bezier(0.17, 0.67, 0.9, 0.48);
-    transition: -webkit-transform 3.5s cubic-bezier(0.17, 0.67, 0.9, 0.48);
-    transition: transform 3.5s cubic-bezier(0.17, 0.67, 0.9, 0.48);
-    transition: transform 3.5s cubic-bezier(0.17, 0.67, 0.9, 0.48), -webkit-transform 3.5s cubic-bezier(0.17, 0.67, 0.9, 0.48);
+    -webkit-transition: -webkit-transform 3.3s cubic-bezier(0.17, 0.67, 0.9, 0.48);
+    transition: -webkit-transform 3.3s cubic-bezier(0.17, 0.67, 0.9, 0.48);
+    transition: transform 3.3s cubic-bezier(0.17, 0.67, 0.9, 0.48);
+    transition: transform 3.3s cubic-bezier(0.17, 0.67, 0.9, 0.48), -webkit-transform 3.3s cubic-bezier(0.17, 0.67, 0.9, 0.48);
   }
 }
 
@@ -1015,31 +1015,39 @@ footer {
   grid-column: 1/-1;
 }
 
-.contacts__phone, .contacts__address {
+.contacts__phone, .contacts__address, .contacts__fb {
   position: relative;
   text-align: left;
   font-weight: 800;
   padding-left: 50px;
 }
 
-.contacts__phone p, .contacts__address p {
+.contacts__phone p, .contacts__address p, .contacts__fb p {
   margin: 0.33333rem 0;
 }
 
-.contacts__phone p:last-child, .contacts__address p:last-child {
+.contacts__phone a, .contacts__phone a:visited, .contacts__address a, .contacts__address a:visited, .contacts__fb a, .contacts__fb a:visited {
+  color: #080e18;
+}
+
+.contacts__phone a:active, .contacts__phone a:hover, .contacts__address a:active, .contacts__address a:hover, .contacts__fb a:active, .contacts__fb a:hover {
+  color: #e36800;
+}
+
+.contacts__phone p:last-child, .contacts__address p:last-child, .contacts__fb p:last-child {
   margin-bottom: 0;
 }
 
 @media (max-width: 47.9em) {
-  .contacts__phone, .contacts__address {
+  .contacts__phone, .contacts__address, .contacts__fb {
     margin: 2rem 0;
   }
-  .contacts__phone p, .contacts__address p {
+  .contacts__phone p, .contacts__address p, .contacts__fb p {
     margin-left: 20%;
   }
 }
 
-.contacts__phone:before, .contacts__address:before {
+.contacts__phone:before, .contacts__address:before, .contacts__fb:before {
   content: '';
   position: absolute;
   display: block;
@@ -1050,9 +1058,24 @@ footer {
   background: url(../images/svg/phone_in_talk-24px.svg) center no-repeat;
 }
 
+.contacts__phone:hover:before, .contacts__phone:hover:after, .contacts__address:hover:before, .contacts__address:hover:after, .contacts__fb:hover:before, .contacts__fb:hover:after {
+  -webkit-transform: rotate(359deg);
+          transform: rotate(359deg);
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.17, 0.67, 0.9, 0.48);
+  transition: -webkit-transform 0.5s cubic-bezier(0.17, 0.67, 0.9, 0.48);
+  transition: transform 0.5s cubic-bezier(0.17, 0.67, 0.9, 0.48);
+  transition: transform 0.5s cubic-bezier(0.17, 0.67, 0.9, 0.48), -webkit-transform 0.5s cubic-bezier(0.17, 0.67, 0.9, 0.48);
+}
+
 .contacts__address::before {
   content: '';
   background: url(../images/svg/location_on-24px.svg) center no-repeat;
+}
+
+.contacts__fb::before {
+  content: '';
+  background: url(../images/svg/fb_icon.svg) center no-repeat;
+  background-size: 20px 20px;
 }
 
 .contacts--sub {

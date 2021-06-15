@@ -1,13 +1,21 @@
 .contacts {
     grid-column: 1/-1;
 
-    &__phone, &__address {
+    &__phone, &__address, &__fb {
         position: relative;
         text-align: left;
         font-weight: 800;
         padding-left:50px;
 
         p {margin:$main-gutter/6 0;}
+
+        a, a:visited {
+            color: $text-color-dark;
+        }
+
+        a:active, a:hover {
+            color: $primary-orange-dark;   
+        }
 
         p:last-child{ margin-bottom: 0;}
 
@@ -28,6 +36,8 @@
             height: 100%;
             background: url(../images/svg/phone_in_talk-24px.svg) center no-repeat;
         }
+
+        @include rotateAnimation(0.5s);
     }
 
     &__address::before {
@@ -35,6 +45,11 @@
         background: url(../images/svg/location_on-24px.svg) center no-repeat;
     }
 
+    &__fb::before {
+        content: '';
+        background: url(../images/svg/fb_icon.svg) center no-repeat;
+        background-size: 20px 20px;
+    }
 
 
     &--sub {

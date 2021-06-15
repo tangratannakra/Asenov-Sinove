@@ -81,3 +81,12 @@ shall be on top for right cascading of styles(bigest shall be last)
     /*----------------------------------------------------------------------*/
     @if $breakpoint == xxl { @media (min-width: 87.5em){@content}; } //1400px ??
 }
+
+@mixin rotateAnimation($time) {
+    &:hover {
+        &:before, &:after {
+            transform: rotate(359deg);
+            transition: transform $time cubic-bezier(.17,.67,.9,.48);
+        }
+    }
+}
