@@ -919,6 +919,11 @@ footer {
   margin-bottom: 0.5rem;
 }
 
+.card__list li:first-child, .card--sub__list li:first-child {
+  list-style-type: none;
+  margin-bottom: 0;
+}
+
 .card small, .card--sub small {
   font-size: 0.8rem;
   font-weight: 800;

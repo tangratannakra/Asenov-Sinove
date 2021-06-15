@@ -167,6 +167,11 @@
         li:not(:last-child){
             margin-bottom: 0.5rem;
         }
+
+        li:first-child {
+            list-style-type: none; 
+            margin-bottom: 0;
+        }
     }
     
     small {
